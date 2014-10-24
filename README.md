@@ -98,4 +98,7 @@ Example:
     ],
 ]
 
+// In your code
+$city = Yii::$app->request->getCity();
+
 ```
