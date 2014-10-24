@@ -74,7 +74,7 @@ $sypexGeo = new omnilight\sypexgeo\Sypexgeo([
     'database' => '@app/data/SxGeoCity.dat',
 ]);
 $city = $sypexGeo->getCity($ip);
-``
+```
 
 **GeoBehavior** - behavior that can be attached to the `yii\web\Request` or it's children and this class adds methods
 to simplify getting Geo information for current request.
