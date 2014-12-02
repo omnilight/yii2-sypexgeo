@@ -56,7 +56,7 @@ You can use it as an application component:
 [
     'components' => [
         'sypexGeo' => [
-            'class' => 'omnilight\sypexgeo\Sypexgeo',
+            'class' => 'omnilight\sypexgeo\SypexGeo',
             'database' => '@app/data/SxGeoCity.dat',
         ]
     ]
