@@ -73,5 +73,6 @@ class SypexGeo extends Component
         if ($this->_sxGeo === null) {
             $this->_sxGeo = new SxGeo(\Yii::getAlias($this->database), $this->accessMode);
         }
+        return $this->_sxGeo;
     }
 } 
