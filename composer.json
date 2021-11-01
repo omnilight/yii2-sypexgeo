@@ -11,7 +11,7 @@
     ],
     "type": "yii2-extension",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=7.1",
         "yiisoft/yii2": "*"
     },
     "autoload": {
