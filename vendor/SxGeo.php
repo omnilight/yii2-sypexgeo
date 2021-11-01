@@ -219,7 +219,7 @@ class SxGeo {
 		$pos = 0;
 		foreach($pack AS $p){
 			list($type, $name) = explode(':', $p);
-			$type0 = $type{0};
+			$type0 = $type[0];
 			if($empty) {
 				$unpacked[$name] = $type0 == 'b' || $type0 == 'c' ? '' : 0;
 				continue;
@@ -243,15 +243,15 @@ class SxGeo {
 				case 'T': $v = unpack('C', $val); break;
 				case 's': $v = unpack('s', $val); break;
 				case 'S': $v = unpack('S', $val); break;
-				case 'm': $v = unpack('l', $val . (ord($val{2}) >> 7 ? "\xff" : "\0")); break;
+				case 'm': $v = unpack('l', $val . (ord($val[2]) >> 7 ? "\xff" : "\0")); break;
 				case 'M': $v = unpack('L', $val . "\0"); break;
 				case 'i': $v = unpack('l', $val); break;
 				case 'I': $v = unpack('L', $val); break;
 				case 'f': $v = unpack('f', $val); break;
 				case 'd': $v = unpack('d', $val); break;
 
-				case 'n': $v = current(unpack('s', $val)) / pow(10, $type{1}); break;
-				case 'N': $v = current(unpack('l', $val)) / pow(10, $type{1}); break;
+				case 'n': $v = current(unpack('s', $val)) / pow(10, $type[1]); break;
+				case 'N': $v = current(unpack('l', $val)) / pow(10, $type[1]); break;
 
 				case 'c': $v = rtrim($val, ' '); break;
 				case 'b': $v = $val; $l++; break;
